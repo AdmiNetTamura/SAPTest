@@ -1,4 +1,4 @@
-name: Deploy to CF
+name: Cloud Foundry CLI GitHub Action
 on:
     push:
         branches:
@@ -7,7 +7,7 @@ jobs:
     deploy:
         runs-on: ubuntu-latest
         steps:
-        - uses: AdmiNetTamura/SAPTest #リポジトリ
+        - uses: elliottpope/cloudfoundry-cli-action@v7
           with:
             CF_API: https://api.cf.us10-001.hana.ondemand.com/ #Cloud Foundry APIエンドポイント
             USERNAME: ${{ secrets.CF_USER }}
