@@ -16,9 +16,10 @@ jobs:
       - name: Install Cloud Foundry CLI
         run: |
           sudo apt-get update
-          sudo apt-get install wget
-          wget -O cf-cli.deb https://github.com/cloudfoundry/cli/releases/download/v8.9.0/cf8-cli-installer_8.9.0_x86-64.deb
+          sudo apt-get install -y wget
+          wget -O cf-cli.deb https://packages.cloudfoundry.org/stable?release=debian64&version=v8&source=github
           sudo dpkg -i cf-cli.deb
+          sudo apt-get install -f
 
       - name: Deploy to Cloud Foundry
         uses: elliottpope/cloudfoundry-cli-action@v6
