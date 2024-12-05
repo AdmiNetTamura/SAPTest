@@ -14,4 +14,4 @@ jobs:
             PASSWORD: ${{ secrets.CF_PASSWORD }} #github上のsecretで設定
             ORG: e11a697dtrial_trial-dq7e7sz0_ext #Cloud Foundry組織名
             SPACE: trialA #Cloud Foundry領域名
-            COMMAND: push employeeList-app #APIを各自修正
+            COMMAND: cf push #APIを各自修正
