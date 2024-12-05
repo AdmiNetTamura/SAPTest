@@ -11,7 +11,7 @@ jobs:
 
     steps:
       - name: Check out the repository
-        uses: actions/checkout@v2
+        uses: elliottpope/cloudfoundry-cli-action@v6
 
       - name: Deploy to Cloud Foundry
         uses: elliottpope/cloudfoundry-cli-action@v6
