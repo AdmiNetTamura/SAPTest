@@ -13,10 +13,6 @@ jobs:
       - name: Check out the repository
         uses: actions/checkout@v2
 
-      - name: Remove Old Cloud Foundry CLI
-        run: |
-          sudo apt-get remove cf-cli -y
-
       - name: Install Cloud Foundry CLI
         run: |
           sudo apt-get update
