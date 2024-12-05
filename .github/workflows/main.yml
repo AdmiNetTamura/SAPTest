@@ -18,10 +18,10 @@ jobs:
       - name: Deploy to Cloud Foundry
         uses: elliottpope/cloudfoundry-cli-action@v6
         with:
-          cf_api: https://api.cf.us10-001.hana.ondemand.com/
-          cf_username: "kazuma.tamura@akkodis.co.jp"
-          cf_password: "Modi#2410"
-          cf_organization: "e11a697dtrial_trial-dq7e7sz0_ext"
-          cf_space: "trialA"
-          command: cf push
+          CF_API: https://api.cf.us10-001.hana.ondemand.com/
+          USERNAME: "kazuma.tamura@akkodis.co.jp"
+          PASSWORD: "Modi#2410"
+          ORG: "e11a697dtrial_trial-dq7e7sz0_ext"
+          SPACE: "trialA"
+          COMMAND: cf push
           
