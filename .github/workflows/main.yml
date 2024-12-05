@@ -1,17 +1,24 @@
-name: Cloud Foundry CLI GitHub Action
+name: Deploy to CF
+
 on:
-    push:
-        branches:
-            [main]
+  push:
+    branches:
+      - main
+
 jobs:
-    deploy:
-        runs-on: ubuntu-latest
-        steps:
-        - uses: elliottpope/cloudfoundry-cli-action@v7
-          with:
-            CF_API: https://api.cf.us10-001.hana.ondemand.com/ #Cloud Foundry APIエンドポイント
-            USERNAME: ${{ secrets.CF_USER }} #github上のsecretで設定
-            PASSWORD: ${{ secrets.CF_PASSWORD }} #github上のsecretで設定
-            ORG: e11a697dtrial_trial-dq7e7sz0_ext #Cloud Foundry組織名
-            SPACE: trialA #Cloud Foundry領域名
-            COMMAND: cf push #APIを各自修正
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out the repository
+        uses: actions/checkout@v2
+
+      - name: Deploy to Cloud Foundry
+        uses: elliottpope/cloudfoundry-cli-action@v7
+        with:
+          CF_API: https://api.cf.us10-001.hana.ondemand.com/
+          USERNAME: kazuma.tamura@akkodis.co.jp
+          PASSWORD: Modi#2410
+          ORG: e11a697dtrial_trial-dq7e7sz0_ext
+          SPACE: trialA
+          COMMAND: push my-app
