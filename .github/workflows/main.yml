@@ -7,7 +7,7 @@ jobs:
     deploy:
         runs-on: ubuntu-latest
         steps:
-        - uses: SAPTest/cloudfoundry-cli-action@v6 #リポジトリ
+        - uses: AdmiNetTamura/SAPTest #リポジトリ
           with:
             CF_API: https://api.cf.us10-001.hana.ondemand.com/ #Cloud Foundry APIエンドポイント
             USERNAME: ${{ secrets.CF_USER }}
