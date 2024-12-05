@@ -16,7 +16,7 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Deploy to Cloud Foundry
-        uses: cloudfoundry/cf-cli-action@v1
+        uses: elliottpope/cloudfoundry-cli-action@v6
         with:
           cf_api: https://api.cf.us10-001.hana.ondemand.com/
           cf_username: "kazuma.tamura@akkodis.co.jp"
