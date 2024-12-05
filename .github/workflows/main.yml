@@ -21,4 +21,4 @@ jobs:
           PASSWORD: Modi#2410
           ORG: e11a697dtrial_trial-dq7e7sz0_ext
           SPACE: trialA
-          COMMAND: push my-app
+          COMMAND: cf push my-app
