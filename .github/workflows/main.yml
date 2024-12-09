@@ -28,4 +28,4 @@ jobs:
           cf target -o "${{ secrets.CF_ORG }}" -s "${{ secrets.CF_SPACE }}"
 
       - name: Deploy to Cloud Foundry
-        run: cf push my-app
+        run: cf push "${{ secrets.CF_APP }}"
