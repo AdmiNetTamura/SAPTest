@@ -9,6 +9,7 @@ port = int(os.environ.get('PORT', 3000))
 @app.route('/')
 def ask_llm():
     if'query' in request.args:
+        # マージテスト
         # 接続初期化tetete
         conn = dbapi.connect(
             address='82d35572-0195-4281-ab4f-e84eec0dca7c.hana.prod-us10.hanacloud.ondemand.com',
